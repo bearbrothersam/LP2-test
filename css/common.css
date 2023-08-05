@@ -126,7 +126,7 @@ li {
 /* introduction */
 .intro {
   background-color: rgba(250, 166, 26, 0.5);
-  padding: 3% 0;
+  padding: 5% 0;
 }
 .sb-ttl {
   text-align: center;
@@ -196,15 +196,18 @@ li {
   object-fit: cover;
 }
 /* method */
+.method {
+  padding: 7.5% 0;
+}
 .method-wrapper {
   width: 60%;
   margin: 3% auto 0;
   display: flex;
   justify-content: space-between;
 }
-.method .sb-ttl{
+/* .method .sb-ttl{
   padding: 3% 0;
-}
+} */
 /* .method-wrapper {
   display: flex;
   justify-content: space-between;
@@ -238,10 +241,11 @@ li {
 /* Q&A */
 .QA {
   background-color: rgba(250, 166, 26, 0.5);
+  padding: 7.5% 0;
 }
 .QA .sb-ttl{
-  margin-top: 5%;
-  padding: 3% 0;
+  /* margin-top: 5%; */
+  padding-bottom: 3%;
 }
 .QA-wrapper {
   width: 60%;
@@ -266,6 +270,9 @@ li {
   align-items: center;
 }
 /* news */
+.news {
+  padding: 5% 0;
+}
 .news .sb-ttl{
   padding: 3% 0;
 }
@@ -292,8 +299,11 @@ li {
   width: 55%;
 }
 /* contact */
+.contact {
+  padding: 5% 0;
+}
 .contact .sb-ttl{
-  padding: 3% 0;
+  padding-bottom: 3%;
 }
 .contact-wrapper {
   width: 60%;
@@ -432,11 +442,11 @@ li {
     font-size: 0.9rem;
   }
   .fv {
-    background-image: url("..//img/fv_ipad_pro.png");
+    background-image: url("..//img/fv-ipad-pro.png");
     background-size: cover;
     background-position: 50%;
     position: relative;
-    height: 100vh;
+    height: calc(100vh - 98px);
   }
   .fv-wrapper {
     position: absolute;
@@ -477,6 +487,9 @@ li {
   .intro-wrapper__block__right img {
     height: 100%;
     width: 100%;
+  }
+  .contact-wrapper__form__block__left p {
+    font-size: 1rem;
   }
   .contact-wrapper__form__block__btn {
     width: 30%;
@@ -547,14 +560,16 @@ li {
   }
   header .header-wrapper__nav__list__item {
     margin: 5% auto;
+    text-align: center;
   }
   header .header-wrapper__nav__list__item a{
     line-height: 3;
     font-size: 1.5rem;
   }
   header .header-wrapper__nav__list__item.__contact {
-    width: 13.5rem;
+    width: 12.5rem;
     border-radius: 50px;
+    margin: 5% auto;
   }
   body.nav-open header .drawer {
     border-top: 0;
@@ -575,8 +590,11 @@ li {
   .fv-wrapper {
     position: absolute;
     width: 40%;
-    top: 40%;
+    top: 35%;
     left: 5.5%;
+  }
+  .fv-wrapper__list__item {
+    width: 60%;
   }
   .sb-ttl small {
     font-size: 1.0rem;
@@ -585,40 +603,59 @@ li {
     font-size: 2.25rem;
   }
   .intro {
-    padding: 5% 0;
+    padding: 7.5% 0;
   }
   .intro-wrapper {
-    width: 80%;
+    width: 70%;
     padding: 5% 0;
   }
   .intro-wrapper__block {
     flex-direction: column;
+    width: 100%;
   }
   .intro-wrapper__block__left {
     width: 60%;
     margin: 0 auto;
   }
+  .intro-wrapper__block__left .txt {
+    line-height: 1.8;
+  }
   .intro-wrapper__block__right {
     width: 60%;
-    margin: 10% auto 0;
+    margin: 5% auto 0;
   }
+  .method {
+    padding: 10% 0;
+  }
+  
   .method-wrapper {
     flex-direction: column;
-    width: 80%;
+    width: 70%;
+  }
+  .method-wrapper__list {
+    margin-top: 0;
+    padding: 3% 0;
+  }
+  .method-wrapper__list__item {
+    font-size: 1.5rem;
   }
   .method-wrapper__ios, 
   .method-wrapper__android{
-    width: 50%;
+    width: 100%;
     margin: 0 auto;
   }
   .method-wrapper__ios {
     margin-bottom: 10%;
   }
+  
   .QA-wrapper__list__item {
     line-height: 1.2;
   }
   .news-wrapper__list__item .date {
     width: 25%;
+  }
+  .contact {
+    padding: 7.5% 0;
   }
   .contact-wrapper__form__block {
     display: block;
@@ -682,7 +719,7 @@ li {
   }
   
 
-@media screen and (max-width: 480px)  {
+@media screen and (max-width: 375px)  {
   .__original {
     display: none;
   }
@@ -703,18 +740,19 @@ li {
     right: 20px;
   }
   .fv {
-    background-image: url("..//img/fv_ipad_pro.png");
+    background-image: url("..//img/fv_sp.png");
     background-size: cover;
     background-position: 50%;
     position: relative;
-    height: calc(100vh - 66px);
+    /* height: calc(100vh - 66px); */
   }
   .fv-wrapper {
-    width: 50%;
-    left: 7.5px;
+    width: 60%;
+    top: 300px;
+    left: 2.5px;
   }
   .fv-wrapper .ttl p {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
   .fv-wrapper .ttl small {
     font-size: 0.75rem;
@@ -723,6 +761,12 @@ li {
   .fv-wrapper .ttl small::after {
     width: 1rem;
   }
+  /* .fv-wrapper__list {
+    display: flex;
+  } */
+  /* .fv-wrapper__list__item:nth-of-type(2) {
+    margin-top: 0;
+  } */
   .sb-ttl small {
     font-size: 0.8rem;
   }
@@ -731,6 +775,7 @@ li {
   }
   .intro-wrapper {
     margin-bottom: 7.5%;
+    padding: 1.5% 0;
   }
   .intro-wrapper:nth-of-type(3) {
     margin-bottom: 0%;
@@ -738,12 +783,15 @@ li {
   .intro-wrapper__block {
     width: 90%;
   }
+  .intro-wrapper__block__left {
+    width: 80%;
+  }
   .intro-wrapper__block__left h3 {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
     margin-bottom: 10%;
   }
   .intro-wrapper__block__left h4 {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     margin-bottom: 10%;
   }
   .intro-wrapper__block__left h4 i {
@@ -758,9 +806,18 @@ li {
   .method-wrapper {
     width: 90%;
   }
+  .method-wrapper__ios,
+  .method-wrapper__android {
+    border: solid #febf64 3px;
+    width: 85%;
+  }
   .method-wrapper__ios h3 {
     font-size: 2rem;
   }
+  .method-wrapper__list__item {
+    font-size: 1.2rem;
+  }
+  
   .QA-wrapper__list__item {
     font-size: 0.65rem;
   }
@@ -783,7 +840,7 @@ li {
     width: 96.5%;
   }
   .contact-wrapper__form__block__btn {
-    width: 40%;
+    width: 50%;
   }
   .contact-wrapper__form__block__btn button {
     font-size: 0.9rem;
